@@ -4,6 +4,7 @@ import functions
 countries = functions.get_countries()
 
 
+
 def add_country():
     country = st.session_state["new_country"] + "\n"
     countries.append(country)
