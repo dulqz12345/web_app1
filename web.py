@@ -3,6 +3,7 @@ import functions
 
 countries = functions.get_countries()
 
+st.set_page_config(layout="wide")
 
 # pip freeze > requirements.txt
 # streamlit run web.py
@@ -14,7 +15,8 @@ def add_country():
 
 st.title("My Countries App")
 st.subheader("This is my countries app.")
-st.write("This app is to increase tour knowledge about the world.")
+st.write("This app is to increase tour <b>knowledge</b> about the world.",
+         unsafe_allow_html=True)
 
 for index, country in enumerate(countries):
     checkbox = st.checkbox(country, key=country)
