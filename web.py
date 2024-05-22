@@ -4,7 +4,8 @@ import functions
 countries = functions.get_countries()
 
 
-
+# pip freeze > requirements.txt
+# streamlit run web.py
 def add_country():
     country = st.session_state["new_country"] + "\n"
     countries.append(country)
@@ -25,4 +26,3 @@ for index, country in enumerate(countries):
 
 st.text_input(label="Country", placeholder="Enter a country...", label_visibility="hidden",
               on_change=add_country, key="new_country")
-
